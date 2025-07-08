@@ -1,0 +1,16 @@
+[project]
+name = "ml-work"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "matplotlib>=3.10.3",
+    "numpy>=2.2.6",
+    "openmeteo-requests>=1.5.0",
+    "pandas>=2.3.0",
+    "requests-cache>=1.2.1",
+    "retry-requests>=2.0.0",
+    "scikit-learn>=1.7.0",
+    "tqdm>=4.67.1",
+]
