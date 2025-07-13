@@ -38,7 +38,37 @@
                 "--save_path", "/opt/data/private/hyl/code/ml-work/ckpts"
             ],
             "env": {
-                "CUDA_VISIBLE_DEVICES": "6"
+                "CUDA_VISIBLE_DEVICES": "7"
+            },
+        },
+        {
+            "name": "Train Transformer Model",
+            "type": "debugpy",
+            "request": "launch",
+            "python": "/opt/data/private/hyl/code/ml-work/.venv/bin/python",
+            "program": "/opt/data/private/hyl/code/ml-work/src/train_transformer.py", 
+            "args": [
+                "--mode", "train",
+                "--data_path", "/opt/data/private/hyl/code/ml-work/data",
+                "--hidden_size", "512",
+                "--n_head", "8",
+                "--n_encoder", "6",
+                "--n_decoder", "6",
+                "--dropout", "0.1",
+                "--epochs", "10",
+                "--output_size", "90",
+                "--input_size", "90",
+                "--lr", "1e-3",
+                "--batch_size", "8",
+                "--seed", "42",
+                "--print_every", "20",
+                "--log_file", "/opt/data/private/hyl/code/ml-work/logs",
+                "--save_path", "/opt/data/private/hyl/code/ml-work/ckpts",
+                "--figure_path", "/opt/data/private/hyl/code/ml-work/figures",
+                "--special_tokens"
+            ],
+            "env": {
+                "CUDA_VISIBLE_DEVICES": "7" 
             },
         }
     ]

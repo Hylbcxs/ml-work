@@ -26,6 +26,11 @@ def process_data(input_csv):
     ]
     for col in numeric_cols:
         df[col] = pd.to_numeric(df[col], errors='coerce')
+    
+    df['sub_metering_remainder'] = (
+        (df['Global_active_power'] * 1000 / 60) -
+        (df['Sub_metering_1'] + df['Sub_metering_2'] + df['Sub_metering_3'])
+    )
 
     # 按天分组并应用不同的聚合操作
     agg_dict = {
@@ -36,6 +41,7 @@ def process_data(input_csv):
         'Sub_metering_1': 'sum',
         'Sub_metering_2': 'sum',
         'Sub_metering_3': 'sum',
+        'sub_metering_remainder': 'first',
         'RR': 'first',   # 假设这些字段一天内是相同的
         'NBJRR1': 'first',
         'NBJRR5': 'first',

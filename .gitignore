@@ -11,10 +11,15 @@ env/
 
 # Large files (if any)
 *.ttf
-ckpt
+ckpts
 logs
 data/train.csv
 data/test.csv
 .lock
+figures/transformer/
+scripts/train_transformer.sh
+src/data_loader/transformer_data_loader.py
+src/models/transformer/
+src/training/train_transformer.py
 
 

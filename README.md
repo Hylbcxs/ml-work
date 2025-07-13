@@ -21,8 +21,8 @@ CUDA_VISIBLE_DEVICES=6 torchrun --nproc_per_node=1 ml-work/src/train.py \
     --output_size 90 \
     --input_size 90 \
     --hidden_size 128 \
-    --input_feature 13 \
-    --output_feature 13 \
+    --input_feature 14 \
+    --output_feature 14 \
     --output_length 90 \
     --lr 1e-3 \
     --batch_size 8 \
